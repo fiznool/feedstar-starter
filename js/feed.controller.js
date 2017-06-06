@@ -2,9 +2,6 @@
 
 angular
   .module('feedstar')
-  .controller('FeedController', function(FeedFactory) {
-    var $ctrl = this;
-
-    $ctrl.feedUrl = FeedFactory.retrieveFeedUrl();
-
+  .controller('FeedController', function($scope, FeedFactory) {
+    $scope.feedUrl = FeedFactory.retrieveFeedUrl();
   });

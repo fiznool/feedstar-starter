@@ -7,14 +7,6 @@
 // the 2nd parameter is an array of 'requires'
 angular
   .module('feedstar', ['ionic'])
-  .config(function($stateProvider) {
-    $stateProvider.state('feed', {
-      url: '/items',
-      templateUrl: 'tmpl/feed.html',
-      controller: 'FeedController',
-      controllerAs: '$ctrl'
-    });
-  })
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
       if(window.cordova && window.cordova.plugins.Keyboard) {
